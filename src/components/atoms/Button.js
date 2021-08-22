@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+export const Button = styled.button`
     width: 150px;
     height: 45px;
     border: none;
@@ -21,5 +21,3 @@ const Button = styled.button`
       color: black;
     }
 `;
-
-export default Button;

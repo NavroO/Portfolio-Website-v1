@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Formik } from 'formik';
-import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
-import MessageInput from '../../atoms/MessageInput/MessageInput';
-import Button from '../../atoms/Button/Button';
-import separatorBlack from '../../../assets/img/separatorBlack.svg';
+import { SectionTitle } from '../atoms/SectionTitle';
+import { MessageInput } from '../atoms/MessageInput';
+import { Button } from '../atoms/Button';
+import separatorBlack from '../../assets/img/separatorBlack.svg';
 
 
 const StyledContact = styled.section`
@@ -36,7 +36,7 @@ const TextArea = styled(MessageInput)`
 `;
 
 
-const Contact = () => {
+export const Contact = () => {
 
     return (
         <StyledContact id="contact">
@@ -127,5 +127,3 @@ const Contact = () => {
         </StyledContact>
     )
 }
-
-export default Contact;

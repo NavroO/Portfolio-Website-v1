@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Paragraph = styled.p`
+export const Paragraph = styled.p`
     margin: 10px 15px;
     font-size: 12px;
     font-family: 'Open Sans', sans-serif;
@@ -38,6 +38,3 @@ const Paragraph = styled.p`
         font-size: 18px;
     }
 `;
-
-
-export default Paragraph;

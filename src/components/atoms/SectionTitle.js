@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 
-const SectionTitle = styled.h1`
+export const SectionTitle = styled.h1`
     width: 200px;
     height: 65px;
     margin: 50px;
@@ -41,7 +41,4 @@ const SectionTitle = styled.h1`
     @media(min-width: 1800px) {
         font-size: 35px;
     }
-
 `;
-
-export default SectionTitle;

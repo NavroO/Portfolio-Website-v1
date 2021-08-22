@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link, animateScroll as scroll } from "react-scroll";
-import separatorWhite from '../../../assets/Icons/separatorWhite2.svg';
-import HeadBackground from '../../../assets/img/headBackground.png';
-import StyledSocialItem from '../../atoms/SocialItem/SocialItem';
+import separatorWhite from '../../assets/img/separatorWhite.svg';
+import HeadBackground from '../../assets/img/headBackground.png';
+import { SocialItem } from '../../components/atoms/SocialItem';
+
 
 const StyledWrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    div {
+        display: inline-block;
+    }
 `;
 
 const StyledHeader = styled.header`
@@ -26,18 +31,17 @@ const StyledHeader = styled.header`
 
 const StyledUl = styled.ul`
 
-    text-align: center;
+    display: none;
     align-items: center;
     justify-content: center;
-    display: flex;
+    text-align: center;
       
-    
     .link {
         
         color: white;
         text-decoration: none;
         position: relative;
-        margin-right: 30px;
+        margin: 0 30px;
         cursor: pointer;
         
         :after {
@@ -59,6 +63,10 @@ const StyledUl = styled.ul`
         :hover:after {
             width: 100%;
         }
+    }
+
+    @media (min-width: 769px) {
+        display: flex;
     }
 `;
 
@@ -122,10 +130,6 @@ const StyledTextSpecialization = styled(StyledText)`
     }
 `
 
-const StyledSocialContainer = styled.div`
-    display: inline;
-`;
-
 export const Hero = () => {
 
     return (
@@ -176,11 +180,11 @@ export const Hero = () => {
                 <StyledWrapper>
                     <StyledText>my name is Thomas</StyledText>
                     <StyledTextSpecialization>I’M A DEVELOPER</StyledTextSpecialization>
-                    <img src={separatorWhite} alt="" />
-                    <StyledSocialContainer>
-                        <StyledSocialItem><a href="https://github.com/NavroO" target="_blank" rel='noreferrer'><i class="fab fa-github"></i></a></StyledSocialItem>
-                        <StyledSocialItem><a href="https://www.linkedin.com/in/tomasz-nawrocki-bab14218b/" target="_blank" rel='noreferrer'><i class="fab fa-linkedin"></i></a></StyledSocialItem>
-                    </StyledSocialContainer>
+                    <img src={separatorWhite} />
+                    <div>
+                        <SocialItem><a href="https://github.com/NavroO" target="_blank" rel='noreferrer'><i class="fab fa-github"></i></a></SocialItem>
+                        <SocialItem><a href="https://www.linkedin.com/in/tomasz-nawrocki-bab14218b/" target="_blank" rel='noreferrer'><i class="fab fa-linkedin"></i></a></SocialItem>
+                    </div>
                 </StyledWrapper>
             </StyledMain>
         </>

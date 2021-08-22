@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SocialItem = styled.p`
+export const SocialItem = styled.p`
     margin: 15px;
     display: inline-block;
     font-size: 20px;
@@ -29,5 +29,3 @@ const SocialItem = styled.p`
         margin: 40px
     }
 `;
-
-export default SocialItem;

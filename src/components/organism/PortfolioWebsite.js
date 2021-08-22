@@ -1,11 +1,11 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Footer from '../molecules/Footer/Footer';
-import Contact from '../molecules/Contact/Contact';
-import MainSkillSecection from '../molecules/MainSkillsSection/MainSkillSection';
-import PortfolioSection from '../molecules/PortfolioSection/PortfolioSection';
-import {Hero} from '../molecules/Hero/Hero';
+import { Footer } from '../molecules/Footer';
+import { Contact } from '../molecules/Contact';
+import { MainSkillSecection } from '../molecules/MainSkillSection';
+import { PortfolioSection } from '../molecules/PortfolioSection';
+import { Hero } from '../molecules/Hero';
 
 
 const PortfolioWebsite = () => {

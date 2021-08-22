@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MessageInput = styled.input`
+export const MessageInput = styled.input`
     width: 240px;
     height: 40px;
     font-size: 12px;
@@ -20,7 +20,3 @@ const MessageInput = styled.input`
         width: 609px;
     }
 `;
-
-
-
-export default MessageInput;

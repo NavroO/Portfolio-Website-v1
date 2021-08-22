@@ -1,21 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import laptop from '../../../assets/img/laptop.svg';
-import pencile from '../../../assets/img/pencile.svg';
-import key from '../../../assets/img/maintenance.svg';
-import separatorBlack from '../../../assets/img/separatorBlack.svg';
-import pdf from './resume.pdf';
-import react from '../../../assets/img/react.svg';
-import css from '../../../assets/img/css.svg';
-import js from '../../../assets/img/js.svg';
-import git from '../../../assets/img/git.svg';
-import sass from '../../../assets/img/sass.svg';
-import eng from '../../../assets/img/eng.svg';
-import figma from '../../../assets/img/figma.svg';
-import node from '../../../assets/img/node.svg';
-import SectionTitle from '../../atoms/SectionTitle/SectionTitle';
-import Paragraph from '../../atoms/Paragraph/Paragraph';
-import Button from '../../atoms/Button/Button';
+import laptop from '../../assets/img/laptop.svg';
+import pencile from '../../assets/img/pencile.svg';
+import key from '../../assets/img/maintenance.svg';
+import separatorBlack from '../../assets/img/separatorBlack.svg';
+import pdf from '../../assets/resume.pdf';
+import react from '../../assets/img/react.svg';
+import css from '../../assets/img/css.svg';
+import js from '../../assets/img/js.svg';
+import mongo from '../../assets/img/mongo.svg';
+import git from '../../assets/img/git.svg';
+import golang from '../../assets/img/golang.svg';
+import eng from '../../assets/img/eng.svg';
+import figma from '../../assets/img/figma.svg';
+import php from '../../assets/img/php.svg';
+import { SectionTitle } from '../../components/atoms/SectionTitle';
+import { Paragraph } from '../../components/atoms/Paragraph';
+import { Button } from '../../components/atoms/Button';
 
 
 
@@ -144,36 +145,50 @@ const SkillItem = styled.div`
         font-size: 24px;
     }
 
+    img {
+        width: 80px;
+        height: 80px;
+    }
+
     @media(min-width: 1024px) {
         display: inline-block;
         text-align: center;
         margin-right: 60px;
+
+        img {
+            width: 120px;
+            height: 120px;
+        }
     }
 `;
 
-const MainSkillSecection = () => {
+export const MainSkillSecection = () => {
+
+    const date = new Date;
+    const year = date.getFullYear();
+
 
     return (
         <>
             <StyledAboutMe id="aboutMe">
                 <SectionTitle>ABOUT ME</SectionTitle>
                 <Paragraph>
-                    I am Tom, I am 21 years old. I love working in a group,
+                    I am Tom, I am {year - 2000} years old. I love working in a group,
                     I feel good working with other people and thus gain new knowledge.
                     I consider myself an organized person and I learn from my mistakes, which is why I try to solve the problems I encounter.
                     I am an empathetic, sincere and honest person. I treat my work as a pleasure, not an obligation.
                 </Paragraph>
                 <StyledExpSection>
                     <li>
-                        <StyledNumber>04+</StyledNumber>
+                        <StyledNumber>04</StyledNumber>
                         <p>Years experience</p>
                     </li>
                     <li>
-                        <StyledNumber>06+</StyledNumber>
+                        <StyledNumber>06</StyledNumber>
                         <p>Completed projects</p>
                     </li>
                     <li>
-                        <StyledNumber>00+</StyledNumber>
+                        <StyledNumber>00</StyledNumber>
                         <p>Companies worked</p>
                     </li>
                 </StyledExpSection>
@@ -202,7 +217,7 @@ const MainSkillSecection = () => {
                         <p>In case of any problems or the need for changes, I can introduce new functionalities and solutions.</p>
                     </StyledItem>
                 </StyledMainWrapper>
-                <img src={separatorBlack} />
+                {/* <img src={separatorBlack} /> */}
             </StyledAboutMe>
             <StyledSkills id="skills">
                 <SectionTitle>SKILLS</SectionTitle>
@@ -221,19 +236,23 @@ const MainSkillSecection = () => {
                         <p>JavaScript</p>
                     </SkillItem>
                     <SkillItem>
+                        <img src={mongo} />
+                        <p>MongoDB</p>
+                    </SkillItem>
+                    <SkillItem>
                         <img src={git} />
                         <p>Git</p>
                     </SkillItem>
                 </SkillsWrapper>
                 <SkillsWrapper>
-                    <h2>LEARNING:</h2>
+                    <h2>I would like to learn:</h2>
                     <SkillItem>
-                        <img src={sass} />
-                        <p>Sass</p>
+                        <img src={golang} />
+                        <p>Golang</p>
                     </SkillItem>
                     <SkillItem>
-                        <img src={node} />
-                        <p>Node.js</p>
+                        <img src={php} />
+                        <p>PHP</p>
                     </SkillItem>
                 </SkillsWrapper>
                 <SkillsWrapper>
@@ -251,5 +270,3 @@ const MainSkillSecection = () => {
         </>
     );
 }
-
-export default MainSkillSecection;

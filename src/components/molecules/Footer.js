@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import StyledSocialItem from '../../atoms/SocialItem/SocialItem';
-import baselinedoublearrow from '../../../assets/img/baseline-double-arrow.svg';
+import { SocialItem } from '../atoms/SocialItem';
+import baselinedoublearrow from '../../assets/img/baseline-double-arrow.svg';
 
 const StyledFooter = styled.footer`
     display: flex;
@@ -43,10 +43,10 @@ const StyledImg = styled.img`
     cursor: pointer;
 `;
 
-const Footer = () => {
+export const Footer = () => {
 
     const scrollTop = () => {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     const date = new Date;
@@ -57,12 +57,10 @@ const Footer = () => {
             <StyledImg src={baselinedoublearrow} alt="" onClick={scrollTop}></StyledImg>
             <StyledFooterParagraph onClick={scrollTop}>BACK TO TOP</StyledFooterParagraph>
             <div>
-                <StyledSocialItem><a href="https://www.facebook.com/tomek.nawrocki.568/" target="_blank"><i class="fab fa-facebook-square"></i></a></StyledSocialItem>
-                <StyledSocialItem><a href="https://www.linkedin.com/in/tomasz-nawrocki-bab14218b/" target="_blank"><i class="fab fa-linkedin"></i></a></StyledSocialItem>
+                <SocialItem><a href="https://www.facebook.com/tomek.nawrocki.568/" target="_blank"><i class="fab fa-facebook-square"></i></a></SocialItem>
+                <SocialItem><a href="https://www.linkedin.com/in/tomasz-nawrocki-bab14218b/" target="_blank"><i class="fab fa-linkedin"></i></a></SocialItem>
             </div>
             <StyledFooterEndText><span>@{year} Tomasz Nawrocki</span> All Rights Reserved.</StyledFooterEndText>
         </StyledFooter>
     );
 }
-
-export default Footer;

@@ -25,7 +25,7 @@ function Root() {
   return (
     <>
       <GlobalStyle />
-      <PortfolioWebiste/>
+      <PortfolioWebiste />
     </>
   );
 }
